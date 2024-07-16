@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Consultar Profesor por ID</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./get_all.css">
+</head>
+<body class="Fondo">
+    <h1>Consultar Profesor por ID</h1>
+    <form action="/get_one" method="post">
+        <label for="id">ID:</label>
+        <input type="text" id="id" name="id"><br>
+        <input type="submit" value="Consultar">
+    </form>
+    <div id="profesor">
+        {% if profesor %}
+        <p>ID: {{ profesor.id }}</p>
+        <p>Nombre: {{ profesor.nombre }}</p>
+        <p>Correo: {{ profesor.correo }}</p>
+        <p>Dirección: {{ profesor.direccion }}</p>
+        {% endif %}
+    </div>
+    <button type="button" onclick="location.href='./index.html'">Regresar</button>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Eliminar Profesor</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./get_all.css">
+</head>
+<body class="Fondo">
+    <h1>Eliminar Profesor</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Correo</th>
+                <th>Dirección</th>
+                <th>Acción</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for profesor in profesores %}
+            <tr>
+                <td>{{ profesor.id }}</td>
+                <td>{{ profesor.nombre }}</td>
+                <td>{{ profesor.correo }}</td>
+                <td>{{ profesor.direccion }}</td>
+                <td>
+                    <form action="/delete" method="post">
+                        <button type="submit" name="id" value="{{ profesor.id }}">Eliminar</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <button type="button" onclick="location.href='./index.html'">Regresar</button>
+</body>
+</html>
+ 

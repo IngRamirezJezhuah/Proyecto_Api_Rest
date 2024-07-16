@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Profesores</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./get_all.css">
+</head>
+<body class="Fondo">
+    <h1>Lista de Profesores</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Correo</th>
+                <th>Dirección</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for profesor in profesores %}
+            <tr>
+                <td>{{ profesor.id }}</td>
+                <td>{{ profesor.nombre }}</td>
+                <td>{{ profesor.correo }}</td>
+                <td>{{ profesor.direccion }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <button type="button" onclick="location.href='./index.html'">Regresar</button>
+</body>
+</html>
+

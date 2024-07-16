@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Modificar Profesor</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./get_all.css">
+</head>
+<body class="Fondo">
+    <h1>Modificar Profesor</h1>
+    <form action="/modify" method="post">
+        <div class="Texto_Tabla">
+            <label for="id">ID:</label>
+            <input type="text" name="id" required><br>
+            <label for="nombre">Nombre:</label>
+            <input type="text" name="nombre" required><br>
+            <label for="correo">Correo:</label>
+            <input type="email" name="correo" required><br>
+            <label for="direccion">Dirección:</label>
+            <input type="text" name="direccion" required><br>
+                <input type="submit" value="Modificar">
+        </div>
+    </form>
+    <button class="Boton_img" type="button" onclick="location.href='./index.html'" >
+        Regresar
+    </button>
+</body>
+</html>
